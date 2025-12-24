@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    char line[200];
+    printf("Enter a line: ");
+    gets(line);
+    int cnt = 0;
+    for (char *p = line; *p; ++p)
+        if (*p=='a'||*p=='e'||*p=='i'||*p=='o'||*p=='u'||
+            *p=='A'||*p=='E'||*p=='I'||*p=='O'||*p=='U')
+            ++cnt;
+    printf("Vowels = %d\n", cnt);
+    return 0;
+}
